@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grey's First Portfolio Site">
+    <title>Grey's Studio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor - Shuriken -->
+    <div class="cursor shuriken-cursor">
+        <svg viewBox="0 0 24 24" class="shuriken">
+            <!-- 4-pointed shuriken -->
+            <path d="M12,2 L16,8 L22,8 L18,12 L22,16 L16,16 L12,22 L8,16 L2,16 L6,12 L2,8 L8,8 Z" 
+                  fill="#c0c0c0" 
+                  stroke="#808080" 
+                  stroke-width="0.5"/>
+            <!-- Center hole -->
+            <circle cx="12" cy="12" r="2" fill="#0a0a0a"/>
+        </svg>
+    </div>
+
+    <!-- Canvas for cursor trail -->
+    <canvas id="cursor-trail"></canvas>
+
+    <!-- Sakura Petals Canvas -->
+    <canvas id="sakura-canvas"></canvas>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Japanese Pattern Overlay -->
+    <div class="japanese-pattern"></div>
+
+    <!-- Decorative Kanji -->
+    <div class="kanji-decorations">
+        <span class="kanji kanji-1" data-parallax="0.2">美</span>
+        <span class="kanji kanji-2" data-parallax="0.4">和</span>
+        <span class="kanji kanji-3" data-parallax="0.3">心</span>
+        <span class="kanji kanji-4" data-parallax="0.25">禅</span>
+    </div>
+
+    <!-- Bamboo Stems -->
+    <div class="bamboo-decoration">
+        <div class="bamboo-stem bamboo-1"></div>
+        <div class="bamboo-stem bamboo-2"></div>
+        <div class="bamboo-stem bamboo-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <span class="logo-text">Grey</span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Full Screen Menu -->
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-links">
+                <a href="#home" class="menu-link" data-text="Home">Home</a>
+                <a href="#work" class="menu-link" data-text="Work">Work</a>
+                <a href="#about" class="menu-link" data-text="About">About</a>
+                <a href="#contact" class="menu-link" data-text="Contact">Contact</a>
+            </div>
+            <div class="menu-info">
+                <p>Based in Bengaluru</p>
+                <p>Available for projects</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Interactive Shapes -->
+    <div class="floating-shapes">
+        <div class="shape shape-circle" data-draggable></div>
+        <div class="shape shape-square" data-draggable></div>
+        <!-- Japanese themed shapes -->
+        <div class="shape shape-wave" data-draggable>
+            <svg viewBox="0 0 100 50" class="wave-svg">
+                <path d="M0,25 Q25,10 50,25 T100,25 L100,50 L0,50 Z" fill="currentColor" opacity="0.3"/>
+                <path d="M0,30 Q25,15 50,30 T100,30 L100,50 L0,50 Z" fill="currentColor" opacity="0.2"/>
+            </svg>
+        </div>
+        <div class="shape shape-sakura" data-draggable>
+            <svg viewBox="0 0 50 50">
+                <path d="M25,15 Q30,20 25,25 Q30,30 25,35 Q20,30 25,25 Q20,20 25,15" fill="currentColor"/>
+                <path d="M15,25 Q20,20 25,25 Q30,20 35,25 Q30,30 25,25 Q20,30 15,25" fill="currentColor"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line" data-scramble data-japanese="創造">Create</span>
+                    <span class="title-line" data-scramble data-japanese="鼓舞">Inspire</span>
+                    <span class="title-line" data-scramble data-japanese="変革">Transform</span>
+                </h1>
+            </div>
+            <div class="hero-vertical">
+                <span class="vertical-text">Digital Craftsmanship</span>
+            </div>
+        </div>
+        <div class="hero-subtitle" data-parallax="0.5">
+            <p>We blend minimalism with interaction</p>
+            <p>to create meaningful experiences</p>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy">
+        <div class="philosophy-content">
+            <div class="philosophy-number" data-parallax="0.3">01</div>
+            <div class="philosophy-text">
+                <h2 class="section-title">Philosophy</h2>
+                <div class="haiku">
+                    <p>Less is always more</p>
+                    <p>Space between the elements</p>
+                    <p>Where meaning resides</p>
+                </div>
+                <p class="body-text">
+                    We embrace the Japanese concept of <em>Ma</em> — the conscious use of 
+                    negative space. Every element serves a purpose, every interaction 
+                    tells a story.
+                </p>
+            </div>
+        </div>
+        <div class="enso-container">
+            <svg class="enso" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="502.65" stroke-dashoffset="50"/>
+            </svg>
+        </div>
+        <!-- Wave Pattern (Seigaiha) -->
+        <div class="wave-pattern">
+            <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="wave" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="40" r="15" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <circle cx="20" cy="40" r="10" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <circle cx="20" cy="40" r="5" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                    </pattern>
+                </defs>
+                <rect width="200" height="100" fill="url(#wave)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work-section">
+        <div class="work-header">
+            <h2 class="section-title">Selected Work</h2>
+            <span class="work-count">04 Projects</span>
+        </div>
+        <div class="work-grid">
+            <a href="https://www.behance.net/gallery/223643779/Etched-Branding-Design" target="_blank" class="work-tile">
+                <div class="work-thumbnail">
+                    <div class="thumbnail-placeholder etched-bg"></div>
+                </div>
+                <div class="work-content">
+                    <div class="work-number">01</div>
+                    <h3>Etched</h3>
+                    <p>E-commerce Clothing Platform</p>
+                    <div class="work-tags">
+                        <span>UI/UX</span>
+                        <span>Design</span>
+                        <span>Branding</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.behance.net/gallery/223538009/Seraphexe" target="_blank" class="work-tile">
+                <div class="work-thumbnail">
+                    <div class="thumbnail-placeholder seraph-bg"></div>
+                </div>
+                <div class="work-content">
+                    <div class="work-number">02</div>
+                    <h3>Seraph.Exe</h3>
+                    <p>Procedural Design</p>
+                    <div class="work-tags">
+                        <span>Design</span>
+                        <span>Experimental</span>
+                        <span>Procedural</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.behance.net/gallery/221385537/GlitchBorn" target="_blank" class="work-tile">
+                <div class="work-thumbnail">
+                    <div class="thumbnail-placeholder glitch-bg"></div>
+                </div>
+                <div class="work-content">
+                    <div class="work-number">03</div>
+                    <h3>GlitchBorn</h3>
+                    <p>Poster Concept</p>
+                    <div class="work-tags">
+                        <span>Poster</span>
+                        <span>Graphic Design</span>
+                        <span>Creative</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.behance.net/gallery/220920235/GreyMatter-UI-Experience" target="_blank" class="work-tile">
+                <div class="work-thumbnail">
+                    <div class="thumbnail-placeholder grey-bg"></div>
+                </div>
+                <div class="work-content">
+                    <div class="work-number">04</div>
+                    <h3>Grey Matter</h3>
+                    <p>UI concept</p>
+                    <div class="work-tags">
+                        <span>Experiment</span>
+                        <span>User Interface</span>
+                        <span>UID</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div class="about-image" data-parallax="0.2">
+                <div class="about-placeholder">
+                    <div class="about-shape"></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-number" data-parallax="0.4">02</div>
+                <h2 class="section-title">About Studio</h2>
+                <div class="about-text">
+                    <p>
+                        I am a Designer / experimental Developer who believes 
+                        in the power of simplicity. My work is driven by curiosity 
+                        and a desire to create digital experiences that feel natural 
+                        and alive.
+                    </p>
+                    <p>
+                        Every project is an opportunity to push boundaries while 
+                        maintaining clarity and purpose.
+                    </p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="20">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="services-header">
+            <h2 class="section-title">What We Do</h2>
+        </div>
+        <div class="services-list">
+            <div class="service-item magnetic-item" data-magnetic>
+                <span class="service-number">01</span>
+                <h3>Design</h3>
+                <p>Visual identity, UI/UX, Art direction</p>
+            </div>
+            <div class="service-item magnetic-item" data-magnetic>
+                <span class="service-number">02</span>
+                <h3>Development</h3>
+                <p>Web apps, Interactive experiences, Performance</p>
+            </div>
+            <div class="service-item magnetic-item" data-magnetic>
+                <span class="service-number">03</span>
+                <h3>Strategy</h3>
+                <p>Brand positioning, User research, Content</p>
+            </div>
+            <div class="service-item magnetic-item" data-magnetic>
+                <span class="service-number">04</span>
+                <h3>Concept</h3>
+                <p>Games, Movies, Art</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <div class="contact-number" data-parallax="0.3">03</div>
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-links">
+                <a href="mailto:ashwingrey.office@gmail.com" class="contact-link magnetic-item" data-magnetic>
+                    <span class="link-text">ashwingrey.office@gmail.com</span>
+                </a>
+                <a href="tel:+918870999846" class="contact-link magnetic-item" data-magnetic>
+                    <span class="link-text">+91 88709 99846</span>
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.artstation.com/ash_grey" class="social-link magnetic-item" data-magnetic>Artstation</a>
+                <a href="https://www.behance.net/ashwingrey27" class="social-link magnetic-item" data-magnetic>Behance</a>
+                <a href="https://www.instagram.com/greycstudios2/" class="social-link magnetic-item" data-magnetic>Instagram</a>
+                <a href="https://www.linkedin.com/in/ashwin-p-72a92216a/" class="social-link magnetic-item" data-magnetic>LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Grey Labs</p>
+            <p>Bengaluru, IND</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

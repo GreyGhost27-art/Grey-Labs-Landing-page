@@ -1,0 +1,31 @@
+{
+  "name": "grey-portfolio",
+  "version": "1.0.0",
+  "description": "A minimalist, interactive portfolio website with Japanese aesthetic design principles",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "minimalist",
+    "japanese",
+    "interactive",
+    "vanilla-js",
+    "css",
+    "html"
+  ],
+  "author": "Grey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/grey-portfolio.git"
+  },
+  "homepage": "https://yourusername.github.io/grey-portfolio",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
