@@ -1,20 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Grey's First Portfolio Site">
-    <title>Grey's Studio</title>
+    <meta name="description" content="Grey's Studio - Designer and experimental developer creating minimalist digital experiences with Japanese aesthetic principles. Portfolio showcasing UI/UX design, branding, and interactive web experiences.">
+    <meta name="keywords" content="designer, developer, portfolio, UI/UX, branding, minimalist design, Japanese design, web development, interactive design">
+    <meta name="author" content="Ashwin Grey">
+    <title>Grey's Studio - Designer & Developer Portfolio</title>
     
-    <!-- Fonts -->
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Grey's Studio - Designer & Developer Portfolio">
+    <meta property="og:description" content="Designer and experimental developer creating minimalist digital experiences with Japanese aesthetic principles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://greys-studio.vercel.app">
+    <meta property="og:image" content="https://greys-studio.vercel.app/preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Grey's Studio - Designer & Developer Portfolio">
+    <meta name="twitter:description" content="Designer and experimental developer creating minimalist digital experiences with Japanese aesthetic principles.">
+    <meta name="twitter:image" content="https://greys-studio.vercel.app/preview.jpg">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#f5f5f0">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical fonts for hero section -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ashwin Grey",
+      "alternateName": "Grey",
+      "url": "https://greys-studio.vercel.app",
+      "image": "https://greys-studio.vercel.app/preview.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/ashwin-p-72a92216a/",
+        "https://www.behance.net/ashwingrey27",
+        "https://www.instagram.com/greycstudios2/",
+        "https://www.artstation.com/ash_grey"
+      ],
+      "jobTitle": "Designer & Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Grey's Studio"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressCountry": "IN"
+      },
+      "email": "ashwingrey.office@gmail.com",
+      "telephone": "+918870999846",
+      "knowsAbout": ["UI/UX Design", "Web Development", "Branding", "Interactive Design", "Minimalist Design"],
+      "description": "Designer and experimental developer creating minimalist digital experiences with Japanese aesthetic principles"
+    }
+    </script>
+    
+    <!-- Portfolio Items Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Grey's Studio Portfolio",
+      "description": "Selected work showcasing minimalist design and Japanese aesthetic principles",
+      "itemListElement": [
+        {
+          "@type": "CreativeWork",
+          "position": 1,
+          "name": "Etched",
+          "description": "E-commerce Clothing Platform",
+          "url": "https://www.behance.net/gallery/223643779/Etched-Branding-Design",
+          "creator": {
+            "@type": "Person",
+            "name": "Ashwin Grey"
+          },
+          "keywords": ["UI/UX", "Design", "Branding"],
+          "genre": "Branding Design"
+        },
+        {
+          "@type": "CreativeWork",
+          "position": 2,
+          "name": "Seraph.Exe",
+          "description": "Procedural Design",
+          "url": "https://www.behance.net/gallery/223538009/Seraphexe",
+          "creator": {
+            "@type": "Person",
+            "name": "Ashwin Grey"
+          },
+          "keywords": ["Design", "Experimental", "Procedural"],
+          "genre": "Experimental Design"
+        },
+        {
+          "@type": "CreativeWork",
+          "position": 3,
+          "name": "GlitchBorn",
+          "description": "Poster Concept",
+          "url": "https://www.behance.net/gallery/221385537/GlitchBorn",
+          "creator": {
+            "@type": "Person",
+            "name": "Ashwin Grey"
+          },
+          "keywords": ["Poster", "Graphic Design", "Creative"],
+          "genre": "Graphic Design"
+        },
+        {
+          "@type": "CreativeWork",
+          "position": 4,
+          "name": "Grey Matter",
+          "description": "UI concept",
+          "url": "https://www.behance.net/gallery/220920235/GreyMatter-UI-Experience",
+          "creator": {
+            "@type": "Person",
+            "name": "Ashwin Grey"
+          },
+          "keywords": ["Experiment", "User Interface", "UID"],
+          "genre": "UI Design"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Custom Cursor - Shuriken -->
     <div class="cursor shuriken-cursor">
         <svg viewBox="0 0 24 24" class="shuriken">
@@ -34,10 +164,39 @@
     <!-- Sakura Petals Canvas -->
     <canvas id="sakura-canvas"></canvas>
 
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="loading-kanji">禅</span>
+            </div>
+            <div class="loading-text">Grey's Studio</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress">
         <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
     </div>
+
+    <!-- Section Navigation Dots -->
+    <nav class="section-nav" aria-label="Page sections">
+        <a href="#home" class="section-dot active" aria-label="Home section" data-section="home"></a>
+        <a href="#work" class="section-dot" aria-label="Work section" data-section="work"></a>
+        <a href="#about" class="section-dot" aria-label="About section" data-section="about"></a>
+        <a href="#contact" class="section-dot" aria-label="Contact section" data-section="contact"></a>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
 
     <!-- Japanese Pattern Overlay -->
     <div class="japanese-pattern"></div>
@@ -50,22 +209,34 @@
         <span class="kanji kanji-4" data-parallax="0.25">禅</span>
     </div>
 
-    <!-- Bamboo Stems -->
-    <div class="bamboo-decoration">
-        <div class="bamboo-stem bamboo-1"></div>
-        <div class="bamboo-stem bamboo-2"></div>
-        <div class="bamboo-stem bamboo-3"></div>
-    </div>
 
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-logo">
             <span class="logo-text">Grey</span>
         </div>
-        <button class="nav-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-        </button>
+        <div class="nav-controls">
+            <button class="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20">
+                    <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                    <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                    <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+                    <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                    <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+                </svg>
+            </button>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
     <!-- Full Screen Menu -->
@@ -103,8 +274,15 @@
         </div>
     </div>
 
+    <!-- Bamboo Stems -->
+    <div class="bamboo-decoration">
+        <div class="bamboo-stem bamboo-1"></div>
+        <div class="bamboo-stem bamboo-2"></div>
+        <div class="bamboo-stem bamboo-3"></div>
+    </div>
+
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" role="main">
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -152,29 +330,24 @@
                 <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="502.65" stroke-dashoffset="50"/>
             </svg>
         </div>
-        <!-- Wave Pattern (Seigaiha) -->
-        <div class="wave-pattern">
-            <svg viewBox="0 0 200 100" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="wave" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <circle cx="20" cy="40" r="15" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-                        <circle cx="20" cy="40" r="10" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-                        <circle cx="20" cy="40" r="5" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-                    </pattern>
-                </defs>
-                <rect width="200" height="100" fill="url(#wave)"/>
-            </svg>
-        </div>
     </section>
 
     <!-- Work Section -->
     <section id="work" class="work-section">
         <div class="work-header">
             <h2 class="section-title">Selected Work</h2>
-            <span class="work-count">04 Projects</span>
+            <div class="work-controls">
+                <div class="work-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                    <button class="filter-btn" data-filter="experimental">Experimental</button>
+                </div>
+                <span class="work-count">04 Projects</span>
+            </div>
         </div>
         <div class="work-grid">
-            <a href="https://www.behance.net/gallery/223643779/Etched-Branding-Design" target="_blank" class="work-tile">
+            <a href="https://www.behance.net/gallery/223643779/Etched-Branding-Design" target="_blank" class="work-tile" data-category="branding">
                 <div class="work-thumbnail">
                     <div class="thumbnail-placeholder etched-bg"></div>
                 </div>
@@ -190,7 +363,7 @@
                 </div>
             </a>
             
-            <a href="https://www.behance.net/gallery/223538009/Seraphexe" target="_blank" class="work-tile">
+            <a href="https://www.behance.net/gallery/223538009/Seraphexe" target="_blank" class="work-tile" data-category="experimental">
                 <div class="work-thumbnail">
                     <div class="thumbnail-placeholder seraph-bg"></div>
                 </div>
@@ -206,7 +379,7 @@
                 </div>
             </a>
             
-            <a href="https://www.behance.net/gallery/221385537/GlitchBorn" target="_blank" class="work-tile">
+            <a href="https://www.behance.net/gallery/221385537/GlitchBorn" target="_blank" class="work-tile" data-category="experimental">
                 <div class="work-thumbnail">
                     <div class="thumbnail-placeholder glitch-bg"></div>
                 </div>
@@ -222,7 +395,7 @@
                 </div>
             </a>
             
-            <a href="https://www.behance.net/gallery/220920235/GreyMatter-UI-Experience" target="_blank" class="work-tile">
+            <a href="https://www.behance.net/gallery/220920235/GreyMatter-UI-Experience" target="_blank" class="work-tile" data-category="ui-ux">
                 <div class="work-thumbnail">
                     <div class="thumbnail-placeholder grey-bg"></div>
                 </div>
@@ -315,6 +488,45 @@
         <div class="contact-content">
             <div class="contact-number" data-parallax="0.3">03</div>
             <h2 class="section-title">Let's Connect</h2>
+            
+            <!-- Contact Form -->
+            <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
+                
+                <!-- Honeypot field for spam protection -->
+                <div class="form-group" style="position: absolute; left: -9999px; opacity: 0;">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                
+                <button type="submit" class="submit-btn magnetic-item" data-magnetic>
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loading">Sending...</span>
+                </button>
+                
+                <div class="form-status" role="status" aria-live="polite"></div>
+            </form>
+            
+            <div class="contact-divider">
+                <span>or reach out directly</span>
+            </div>
+            
             <div class="contact-links">
                 <a href="mailto:ashwingrey.office@gmail.com" class="contact-link magnetic-item" data-magnetic>
                     <span class="link-text">ashwingrey.office@gmail.com</span>
@@ -324,10 +536,10 @@
                 </a>
             </div>
             <div class="social-links">
-                <a href="https://www.artstation.com/ash_grey" class="social-link magnetic-item" data-magnetic>Artstation</a>
-                <a href="https://www.behance.net/ashwingrey27" class="social-link magnetic-item" data-magnetic>Behance</a>
-                <a href="https://www.instagram.com/greycstudios2/" class="social-link magnetic-item" data-magnetic>Instagram</a>
-                <a href="https://www.linkedin.com/in/ashwin-p-72a92216a/" class="social-link magnetic-item" data-magnetic>LinkedIn</a>
+                <a href="https://www.artstation.com/ash_grey" target="_blank" rel="noopener noreferrer" class="social-link magnetic-item" data-magnetic>Artstation</a>
+                <a href="https://www.behance.net/ashwingrey27" target="_blank" rel="noopener noreferrer" class="social-link magnetic-item" data-magnetic>Behance</a>
+                <a href="https://www.instagram.com/greycstudios2/" target="_blank" rel="noopener noreferrer" class="social-link magnetic-item" data-magnetic>Instagram</a>
+                <a href="https://www.linkedin.com/in/ashwin-p-72a92216a/" target="_blank" rel="noopener noreferrer" class="social-link magnetic-item" data-magnetic>LinkedIn</a>
             </div>
         </div>
     </section>
@@ -335,7 +547,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <p>© 2025 Grey Labs</p>
             <p>Bengaluru, IND</p>
@@ -343,6 +555,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
