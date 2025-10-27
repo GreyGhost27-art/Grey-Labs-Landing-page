@@ -1,0 +1,12 @@
+{
+  "name": "greys-studio-contact-form",
+  "version": "1.0.0",
+  "description": "Contact form handler for Grey's Studio portfolio",
+  "main": "contact.js",
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.450.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

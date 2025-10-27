@@ -1,12 +1,14 @@
 {
   "name": "grey-portfolio",
-  "version": "1.0.0",
-  "description": "A minimalist, interactive portfolio website with Japanese aesthetic design principles",
+  "version": "2.0.0",
+  "description": "A minimalist, interactive portfolio website with Japanese aesthetic design principles, featuring dark/light themes, PWA support, and enhanced accessibility",
   "main": "index.html",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "python3 -m http.server 8000",
-    "serve": "npx serve .",
-    "dev": "python3 -m http.server 8000"
+    "serve": "npx serve ."
   },
   "keywords": [
     "portfolio",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://yourusername.github.io/grey-portfolio",
   "devDependencies": {
+    "vite": "^5.0.0",
     "serve": "^14.0.0"
   }
 }
